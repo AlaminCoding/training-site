@@ -4314,7 +4314,39 @@
           <div class="col-lg-6 order-md-12">
             <div class="contact_area">
               <div class="contact-scroll" id="contact"></div>
-              <div class="form_area" id="form_container">
+              <!-- Bitrix Form -->
+              <section class="bitrix-form" style="padding-top: 35px">
+                <script id="bx24_form_inline" data-skip-moving="true">
+                  (function (w, d, u, b) {
+                    w["Bitrix24FormObject"] = b;
+                    w[b] =
+                      w[b] ||
+                      function () {
+                        arguments[0].ref = u;
+                        (w[b].forms = w[b].forms || []).push(arguments[0]);
+                      };
+                    if (w[b]["forms"]) return;
+                    var s = d.createElement("script");
+                    s.async = 1;
+                    s.src = u + "?" + 1 * new Date();
+                    var h = d.getElementsByTagName("script")[0];
+                    h.parentNode.insertBefore(s, h);
+                  })(
+                    window,
+                    document,
+                    "https://b24-tt2bv8.bitrix24.com/bitrix/js/crm/form_loader.js",
+                    "b24form"
+                  );
+
+                  b24form({
+                    id: "2",
+                    lang: "en",
+                    sec: "3yf8ro",
+                    type: "inline",
+                  });
+                </script>
+              </section>
+              <!-- <div class="form_area" id="form_container">
                 <h2>
                   Have a Question?<br />
                   contact us
@@ -4377,7 +4409,7 @@
                     <button type="submit" class="btn btn_send">Send</button>
                   </div>
                 </form>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="col-lg-6 order-md-12">
@@ -4578,5 +4610,18 @@
     <script src="js/custom.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/datecount.js"></script>
+    <script>
+      (function (w, d, u) {
+        var s = d.createElement("script");
+        s.async = true;
+        s.src = u + "?" + ((Date.now() / 60000) | 0);
+        var h = d.getElementsByTagName("script")[0];
+        h.parentNode.insertBefore(s, h);
+      })(
+        window,
+        document,
+        "https://cdn.bitrix24.com/b15773863/crm/site_button/loader_4_1r6c2q.js"
+      );
+    </script>
   </body>
 </html>
